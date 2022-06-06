@@ -43,6 +43,26 @@ const LoginForm = () => {
         }
     }
 
+    const loginAsGuest = async event => {
+        event.preventDefault()
+
+        try {
+            const guestAccount = {
+                username: 'Guest',
+                password: 'Guest123'
+            }
+            const loginData = await loginUser(guestAccount)
+            if (!loginData.success) {
+                setAlert({ type: 'danger', message: loginData.message })
+                setTimeout(() => setAlert(null), 6000)
+            } else {
+                navigate(from, { replace: true })
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <>
             <Form className='my-3' onSubmit={login}>
@@ -78,6 +98,9 @@ const LoginForm = () => {
                         Register
                     </Button>
                 </Link>
+                <Button variant='success' size='sm' className='ml-2' onClick={loginAsGuest}>
+                    Login as Guest
+                </Button>
             </p>
         </>
     )
