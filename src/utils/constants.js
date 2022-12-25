@@ -1,5 +1,4 @@
-// export const apiUrl = 'http://localhost:5000/api'
-export const apiUrl = 'https://learnit-server-vothanhtung.herokuapp.com/api'
+export const apiUrl = 'https://learnit-vothanhtung.onrender.com/api'
 
 export const LOCAL_STORAGE_TOKEN_NAME = 'learnit-mern'
 

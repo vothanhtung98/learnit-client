@@ -14,7 +14,7 @@ const About = () => {
                 <Card.Body>
                     <Card.Title>Welcome to LearnIt</Card.Title>
                     <Card.Text>
-                        This app is deployed at Heroku(Server) and Firebase(Client)
+                        This app is deployed at Render(Server) and Firebase(Client)
                     </Card.Text>
                     <Card.Text>
                         You can visit source code
